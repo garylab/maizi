@@ -13,7 +13,7 @@ Domain Path: /languages
 */
 html,body {
     font-size: 14px;
-    font-family: "Segoe UI", "SimSun", "Microsoft YaHei", "SimHei", "Arial", 'sans-serif';
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
 }
