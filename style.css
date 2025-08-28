@@ -13,7 +13,12 @@ Domain Path: /languages
 */
 html,body {
     font-size: 14px;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+	font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Variable", "PingFang SC", "PingFang TC", "Microsoft YaHei UI", "Microsoft YaHei", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans CJK SC", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -31,6 +36,28 @@ h3, h4, h5, h6{font-size: 1.1rem; }
 
 article h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+/* Optimize font rendering for different content types */
+.article-content {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* Better font rendering for Chinese text */
+:lang(zh), :lang(zh-CN), :lang(zh-TW) {
+    font-feature-settings: normal;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+}
+
+/* English content optimization */
+:lang(en) {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
 }
 
 .article-content h2{
@@ -285,9 +312,11 @@ a.skip-link {
     padding: 3px;
 }
 .article-content p {
-    line-height: 1.7rem;
+    line-height: 1.75;
     max-width: 100%;
     white-space: pre-wrap;
+    font-weight: 400;
+    margin-bottom: 1.2em;
 }
 
 .article-content ul {
